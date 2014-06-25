@@ -26,16 +26,19 @@ if answer == "1" :
 # SEARCHING FOR A RECORD
 
 elif answer == "2" :
-    print ("this is where we search")
-    searchcriteria = raw_input("Enter your search Criteria. Name, Phone Number, Address, Email or Postcode, or Town ")
+    print ("This is where we search")
+    searchcriteria = raw_input("Enter your search Criteria: Name, Phone Number, Address, Email, Postcode, or Town ")
     print searchcriteria
     temp1 = open("addressbookdata","r")
     for line in temp1:
         if searchcriteria in line:
-            print line
+            print line 
+        else:
+            print ("No results found")
 
 
 # USER DID NOT PICK CREATE OR SEARCH 
 
-else :
+else:
     print ("Incorrect Answer")
+    exit()
